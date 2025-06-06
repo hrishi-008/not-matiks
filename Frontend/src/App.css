@@ -40,3 +40,37 @@
 .read-the-docs {
   color: #888;
 }
+
+.feedback {
+  margin: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+.feedback.correct {
+  color: #22c55e;
+  animation: pop 0.3s;
+}
+.feedback.wrong {
+  color: #ef4444;
+  animation: shake 0.3s;
+}
+.final-score {
+  margin-top: 2em;
+  font-size: 1.5em;
+  color: #0ea5e9;
+  font-weight: bold;
+  animation: pop 0.4s;
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
