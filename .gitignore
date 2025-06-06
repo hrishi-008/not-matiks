@@ -1,0 +1,2 @@
+# add node modules nested anywhere, inbetween any directory
+**/node_modules
