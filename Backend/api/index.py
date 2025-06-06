@@ -5,7 +5,8 @@ import base64
 import json
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://not-matiks.hrishk.me"])  # Allow only your frontend domain
+
 
 def random_addn_question():
     n1 = random.randint(1, 100)
