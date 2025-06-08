@@ -6,7 +6,7 @@ import TimerDisplay from './components/TimerDisplay'
 import ScoreDisplay from './components/ScoreDisplay'
 import './App.css'
 
-const BACKEND_URL = 'https://not-matiks-backend.hrishk.me';
+const BACKEND_URL = 'https://not-matiks.onrender.com';
 
 function App() {
   const [gameStarted, setGameStarted] = useState(false)
