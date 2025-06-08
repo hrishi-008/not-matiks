@@ -7,7 +7,7 @@ from flask_cors import cross_origin
 
 
 app = Flask(__name__)
-CORS(app, origins=["https://not-matiks.hrishk.me", "https://not-matiks-rdbj-6lr2sftol-hrishi-008s-projects.vercel.app"], supports_credentials=True)
+# CORS(app, origins=["https://not-matiks.hrishk.me", "https://not-matiks-rdbj-6lr2sftol-hrishi-008s-projects.vercel.app"], supports_credentials=True)
 
 
 def random_addn_question():
