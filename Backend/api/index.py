@@ -3,6 +3,8 @@ from flask_cors import CORS
 import random
 import base64
 import json
+from flask_cors import cross_origin
+
 
 app = Flask(__name__)
 CORS(app, origins=["https://not-matiks.hrishk.me", "https://not-matiks-rdbj-6lr2sftol-hrishi-008s-projects.vercel.app"], supports_credentials=True)
@@ -20,11 +22,13 @@ def random_addn_question():
     return dict(question=question, token=token)
 
 @app.route("/question", methods=["GET"])
+@cross_origin(origins=["https://not-matiks.hrishk.me/"])
 def get_question():
     q = random_addn_question()
     return jsonify({"question": q["question"], "token": q["token"]})
 
 @app.route("/check", methods=["POST"])
+@cross_origin(origins=["https://not-matiks.hrishk.me/"])
 def check_answer():
     data = request.get_json()
     user_answer = data.get("answer")
@@ -45,6 +49,7 @@ def check_answer():
     })
 
 @app.route("/")
+@cross_origin(origins=["https://not-matiks.hrishk.me/"])
 def welcome():
     welcome_html = """
     <!DOCTYPE html>
